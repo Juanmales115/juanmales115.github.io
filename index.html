@@ -3,34 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Juan Manuel Ramírez Rivas | Portfolio</title>
     <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            background-color: var(--light);
         }
         .container {
-            text-align: center;
-            background: white;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        h1 { color: #333; }
-        p { color: #666; }
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        h1 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .status {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        section {
+            margin: 3rem 0;
+        }
+        h2 {
+            color: var(--dark);
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-2px);
+        }
+        .project-title {
+            font-weight: bold;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+        .tech-stack {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 0.5rem;
+            font-family: monospace;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+        .skill-item {
+            background: white;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+        }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>Hello, I'm Juan</h1>
-        <p>Software Developer | Tech Enthusiast</p>
-        <p>Work in progress...</p>
+        <header>
+            <h1>Juan Manuel Ramírez Rivas</h1>
+            <div class="subtitle">Mathematics Student & ML Enthusiast</div>
+            <div class="status">Available for full-time employment: July 2026</div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a Mathematics student at the University of Granada with a strong curiosity about Machine Learning. 
+                I am fascinated by how abstract ideas turn into practical solutions. My goal is to keep growing professionally 
+                and make a positive impact through data.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Key Projects</h2>
+            
+            <div class="project-card">
+                <div class="project-title">Ensemble Model for Kaggle (Top 27)</div>
+                <p>Developed a Stacking ensemble model combining XGBoost, CatBoost, and Ridge. Implemented Scikit-learn pipelines with custom transformers.</p>
+                <div class="tech-stack">Python • XGBoost • CatBoost • Scikit-learn • RMSLE: 0.12193</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Flight Data Analysis</div>
+                <p>Analyzed flight data to investigate root causes of delays and evaluated performance metrics by airline.</p>
+                <div class="tech-stack">Data Analysis • Statistics • Root Cause Analysis</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Environmental Data Correlation</div>
+                <p>Explored environmental data revealing correlation patterns between substances and demonstrating trends using regression techniques.</p>
+                <div class="tech-stack">Regression • Statistical Analysis • Python</div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Python</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Git / GitHub</div>
+                <div class="skill-item">Statistical Analysis</div>
+                <div class="skill-item">BigQuery</div>
+                <div class="skill-item">Logic</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                <a href="https://github.com/Juanmales115">GitHub</a> • 
+                <a href="https://linkedin.com/in/juanma-ramirez-rivas/">LinkedIn</a> • 
+                <a href="mailto:juanmales115@gmail.com">Email</a>
+            </p>
+            <p>&copy; 2026 Juan Manuel Ramírez Rivas</p>
+        </footer>
     </div>
+
 </body>
 </html>
