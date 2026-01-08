@@ -12,7 +12,8 @@
         :root {
             --primary: #2563eb;
             --dark: #1e293b;
-            --light: #f8fafc;
+            /* CAMBIO: Tono sepia claro para el fondo */
+            --light: #f9f3e3; 
             --text: #334155;
         }
         body {
@@ -31,7 +32,7 @@
         header {
             text-align: center;
             padding: 4rem 0;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #d1d5db; /* Ajustado ligeramente para contraste en sepia */
         }
         h1 {
             color: var(--dark);
@@ -63,7 +64,7 @@
             margin-bottom: 1.5rem;
         }
         .project-card {
-            background: white;
+            background: white; /* Las tarjetas se quedan blancas para resaltar sobre el sepia */
             padding: 1.5rem;
             border-radius: 0.5rem;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -86,7 +87,6 @@
         }
         .skills-grid {
             display: grid;
-            /* Increased from 120px to 140px to prevent awkward text wrapping */
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 1rem;
         }
@@ -102,7 +102,7 @@
             text-align: center;
             margin-top: 4rem;
             padding-top: 2rem;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid #d1d5db;
             color: #64748b;
         }
         a { color: var(--primary); text-decoration: none; }
