@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Portfolio of Juan Manuel Ramírez Rivas - Mathematics Student & Data Scientist specializing in Machine Learning, ETL pipelines, and Statistical Analysis.">
-    <meta property="og:title" content="Juan Manuel Ramírez Rivas | Data Science Portfolio">
-    <meta property="og:description" content="Check out my projects in Energy Forecasting, ML Ensembles, and Data Analysis.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Manuel Ramírez Rivas | Portfolio</title>
+    <meta name="description" content="Research Portfolio of Juan Manuel Ramírez Rivas - Mathematician specializing in Probabilistic Machine Learning, Diffusion Models in Computer Vision, and Computational Topology.">
+    <meta property="og:title" content="Juan Manuel Ramírez Rivas | Mathematical Machine Learning & Computer Vision">
+    <meta property="og:description" content="Research portfolio featuring Probabilistic Generative Models, Diffusion for Computer Vision, and Computational Topology.">
+    <meta property="og:type" content="website">
+    <title>Juan Manuel Ramírez Rivas | Research Portfolio</title>
+
+    <!-- KaTeX for sharp mathematical typography -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+
     <style>
         :root {
-            /* MEJORA: Paleta de color optimizada para contraste de elevación técnica */
-            --bg-main: #08090b;
-            --bg-card: #111318;
-            --border-color: rgba(255, 255, 255, 0.06);
-            --border-hover: rgba(255, 255, 255, 0.18);
-            --text-main: #ffffff;
-            --text-muted: #94a3b8; /* Tono slate para texto secundario */
-            --tag-bg: rgba(255, 255, 255, 0.03);
-            --tag-border: rgba(255, 255, 255, 0.06);
-            --icon-cyan: #06b6d4;
-            --icon-green: #10b981;
-            --icon-blue: #3b82f6;
-            --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            --bg-canvas: #090a0f;
+            --bg-surface: #11141d;
+            --bg-surface-elevated: #161a26;
+            --bg-pill: rgba(255, 255, 255, 0.04);
+            
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-accent: rgba(99, 102, 241, 0.35);
+            --border-hover: rgba(255, 255, 255, 0.22);
+            
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --accent-math: #818cf8;      /* Indigo/Purple: Probabilistic ML & Deep Learning */
+            --accent-vision: #38bdf8;    /* Cyan/Sky: Computer Vision & Diffusion */
+            --accent-topology: #ec4899;  /* Rose/Pink: Computational Topology & TDA */
+            --accent-quantum: #34d399;   /* Mint/Emerald: Quantum Information */
+            --accent-amber: #fbbf24;     /* Amber: Ensembles & Descriptive Stats */
+
+            --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         html {
@@ -30,286 +46,569 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-main);
             margin: 0;
             padding: 0;
-            background-color: var(--bg-main);
+            font-family: var(--font-sans);
+            background-color: var(--bg-canvas);
+            color: var(--text-primary);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
             position: relative;
         }
 
+        /* Ambient background with mathematical texture */
         body::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 700px;
+            height: 720px;
             background-image: 
-                linear-gradient(to bottom, transparent 0%, var(--bg-main) 98%),
-                url('./math.jpg'); 
+                linear-gradient(to bottom, rgba(9, 10, 15, 0.45) 0%, var(--bg-canvas) 95%),
+                url('./assets/img/math.jpg');
             background-size: cover;
             background-position: top center;
             background-repeat: no-repeat;
             z-index: -1;
-            opacity: 0.35; /* Suavizado para dar prioridad absoluta al texto del header */
+            opacity: 0.26;
+            filter: grayscale(45%);
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1040px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 3rem 1.75rem 5rem;
         }
 
+        /* Header */
         header {
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 6rem 0 3.5rem 0; 
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 3rem;
-            gap: 2rem; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+            padding: 2.5rem 0 3.5rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .header-content {
+            flex: 1;
         }
 
         h1 {
-            margin: 0 0 1rem 0; 
-            font-size: 3.2rem; 
-            letter-spacing: -0.03em;
+            font-size: 2.85rem;
             font-weight: 800;
-            text-shadow: 
-                0 2px 4px rgba(0, 0, 0, 0.9), 
-                0 4px 20px rgba(0, 0, 0, 0.9);
-            width: fit-content;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.8);
-            padding-bottom: 0.5rem;
+            letter-spacing: -0.035em;
+            margin: 0 0 0.6rem 0;
+            line-height: 1.15;
+            color: #ffffff;
         }
 
-        .subtitle-container {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .subtitle {
-            color: #f4f4f5; 
-            font-size: 1.35rem; 
-            letter-spacing: -0.01em;
-            font-weight: 500;
-            margin: 0;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
-        }
-
-        .header-socials {
-            display: flex;
-            gap: 0.65rem;
-        }
-
-        .social-circle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            color: #a1a1aa;
-            transition: var(--transition-smooth);
-        }
-
-        .social-circle:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.3);
-            color: var(--text-main);
-            transform: translateY(-2px);
-        }
-
-        .profile-pic {
-            width: 240px; 
-            height: 240px;
-            border-radius: 100%; 
-            border: 1px solid rgba(255, 255, 255, 0.15); 
-            box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.02);
-            object-fit: cover; 
-            object-position: center 20%; 
-            flex-shrink: 0; 
-        }
-
-        section {
-            margin: 4rem 0;
-        }
-
-        #about {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2.5rem;
-            backdrop-filter: blur(8px); 
-        }
-
-        #about h2 {
-            margin-top: 0;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            letter-spacing: -0.025em;
-            font-weight: 700;
-        }
-
-        .projects-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; 
-            gap: 1.5rem;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 1.75rem;
-            display: flex;
-            flex-direction: column;
-            transition: var(--transition-smooth);
-            flex: 1 1 300px;
-            max-width: 320px; 
-            box-sizing: border-box;
-        }
-
-        .project-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.4);
-        }
-
-        .project-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 1rem;
-        }
-
-        .project-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            transition: var(--transition-smooth);
-        }
-
-        /* Asignación directa y permanente del color a cada icono */
-        .project-icon.icon-forecasting { color: var(--icon-cyan); }
-        .project-icon.icon-ensemble { color: var(--icon-blue); }
-        .project-icon.icon-quantum { color: var(--icon-green); }
-        .project-icon.icon-generic { color: var(--text-main); }
-
-        .project-title {
-            font-weight: 600;
+        .academic-affiliation {
             font-size: 1.15rem;
-            margin: 0;
-            letter-spacing: -0.01em;
-        }
-
-        .project-title a {
-            color: var(--text-main);
-            text-decoration: none;
-        }
-
-        .project-title a:hover {
-            text-decoration: underline;
-        }
-
-        .project-desc {
-            color: var(--text-muted); 
-            font-size: 0.92rem;
-            margin-bottom: 1.75rem;
-            flex-grow: 1;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-        }
-
-        .tech-tag {
-            background: var(--tag-bg);
-            border: 1px solid var(--tag-border);
-            color: #e4e4e7;
-            padding: 0.25rem 0.65rem;
-            border-radius: 6px;
-            font-size: 0.72rem;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            color: var(--accent-math);
             font-weight: 500;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
         }
 
-        p { color: var(--text-muted); }
-        b { color: var(--text-main); font-weight: 600; }
-        
-        .skills-grid {
+        .academic-summary {
+            font-size: 1.02rem;
+            color: #cbd5e1;
+            max-width: 640px;
+            margin-bottom: 1.75rem;
+            line-height: 1.65;
+        }
+
+        .scholarly-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 0.75rem;
-            justify-content: center; 
+            align-items: center;
         }
-        
-        .skill-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 0.5rem 1.1rem;
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.05rem;
             border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: rgba(129, 140, 248, 0.15);
+            border: 1px solid rgba(129, 140, 248, 0.4);
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background: rgba(129, 140, 248, 0.28);
+            border-color: #818cf8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--border-hover);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        .profile-wrapper {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 210px;
+            height: 210px;
+            border-radius: 20px;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+            display: block;
+        }
+
+        /* Section Layout */
+        section {
+            margin: 4.5rem 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 1.45rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-num {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-math);
+            font-weight: 600;
+        }
+
+        /* Research Pillars (Vision + Topology ONLY) */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .interest-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.75rem;
+            transition: var(--transition);
+        }
+        .interest-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            background: var(--bg-surface-elevated);
+        }
+
+        .interest-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .interest-icon-badge {
+            width: 38px;
+            height: 38px;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .icon-badge-vision {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-vision);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+        .icon-badge-topology {
+            background: rgba(236, 72, 153, 0.12);
+            color: var(--accent-topology);
+            border: 1px solid rgba(236, 72, 153, 0.25);
+        }
+
+        .interest-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .interest-formula {
+            font-family: var(--font-mono);
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            margin: 0.35rem 0 0.85rem 0;
+        }
+
+        .interest-desc {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        /* Research Project Cards */
+        .research-projects {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .rp-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 2rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        .rp-card:hover {
+            border-color: var(--border-hover);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+        }
+
+        .rp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .rp-title-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+        }
+
+        /* Minimalist area-specific icon */
+        .rp-area-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+        .area-icon-vae {
+            background: rgba(129, 140, 248, 0.12);
+            border: 1px solid rgba(129, 140, 248, 0.25);
+            color: var(--accent-math);
+        }
+        .area-icon-qml {
+            background: rgba(52, 211, 153, 0.12);
+            border: 1px solid rgba(52, 211, 153, 0.25);
+            color: var(--accent-quantum);
+        }
+        .area-icon-ensemble {
+            background: rgba(251, 191, 36, 0.12);
+            border: 1px solid rgba(251, 191, 36, 0.25);
+            color: var(--accent-amber);
+        }
+
+        .rp-badge {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            padding: 0.22rem 0.6rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            display: inline-block;
+            margin-bottom: 0.35rem;
+        }
+        .badge-math { background: rgba(129, 140, 248, 0.15); color: #c7d2fe; border: 1px solid rgba(129, 140, 248, 0.3); }
+        .badge-quantum { background: rgba(52, 211, 153, 0.15); color: #a7f3d0; border: 1px solid rgba(52, 211, 153, 0.3); }
+        .badge-ensemble { background: rgba(251, 191, 36, 0.15); color: #fde68a; border: 1px solid rgba(251, 191, 36, 0.3); }
+        .badge-stats { background: rgba(56, 189, 248, 0.15); color: #bae6fd; border: 1px solid rgba(56, 189, 248, 0.3); }
+
+        .rp-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.015em;
+        }
+        .rp-title a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .rp-title a:hover {
+            color: var(--accent-math);
+        }
+
+        .rp-links {
+            display: flex;
+            gap: 0.65rem;
+            align-items: center;
+        }
+        .rp-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+        .rp-link:hover {
+            color: #ffffff;
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .rp-body {
+            font-size: 0.94rem;
+            color: var(--text-secondary);
+            margin: 1.2rem 0;
+            line-height: 1.7;
+        }
+
+        /* Mathematical Formulation Callouts */
+        .math-callout {
+            background: rgba(0, 0, 0, 0.38);
+            border-left: 3px solid var(--accent-math);
+            border-radius: 0 8px 8px 0;
+            padding: 0.9rem 1.25rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+        .math-callout.quantum {
+            border-left-color: var(--accent-quantum);
+        }
+        .math-callout.ensemble {
+            border-left-color: var(--accent-amber);
+        }
+
+        .rp-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .rp-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+        }
+        .tag {
+            background: var(--bg-pill);
+            border: 1px solid var(--border-subtle);
+            color: #cbd5e1;
+            padding: 0.22rem 0.6rem;
+            border-radius: 5px;
+            font-size: 0.74rem;
+            font-family: var(--font-mono);
+        }
+
+        /* Applied Systems & Descriptive Modeling Grid */
+        .applied-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+        .applied-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+        .applied-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+        }
+
+        /* Academic Timeline */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .timeline-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: var(--transition);
+        }
+        .timeline-item:hover {
+            border-color: var(--border-hover);
+        }
+
+        .timeline-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 0 0 0.35rem 0;
+            color: #ffffff;
+        }
+        .timeline-institution {
+            color: var(--accent-math);
+            font-size: 0.93rem;
+            font-weight: 500;
+        }
+        .timeline-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0.65rem 0 0 0;
+            line-height: 1.6;
+        }
+        .timeline-date {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            padding: 0.3rem 0.65rem;
+            border-radius: 6px;
+        }
+
+        /* Methodological & Technical Competencies */
+        .skills-category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-group {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .skill-group-title {
+            font-size: 0.92rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-math);
+            margin: 0 0 1rem 0;
+            font-family: var(--font-mono);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+        .skill-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 0.88rem;
-            color: #d4d4d8;
-            transition: var(--transition-smooth);
+            color: var(--text-secondary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            padding-bottom: 0.4rem;
+        }
+        .skill-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .skill-row span:first-child {
+            color: #e2e8f0;
+            font-weight: 500;
         }
 
-        .skill-item:hover {
-            border-color: rgba(255, 255, 255, 0.2);
-            color: var(--text-main);
-            background: rgba(255, 255, 255, 0.02);
-        }
-
+        /* Footer */
         footer {
-            margin-top: 6rem;
-            padding: 2.5rem 0;
-            border-top: 1px solid var(--border-color);
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-subtle);
             text-align: center;
-            color: #71717a;
+            color: var(--text-muted);
             font-size: 0.88rem;
         }
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: var(--transition);
+        }
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
 
-        footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.5rem; transition: var(--transition-smooth); }
-        footer a:hover { color: var(--text-main); text-decoration: underline; }
-
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             header {
-                flex-direction: column-reverse; 
+                flex-direction: column-reverse;
                 text-align: center;
-                padding: 3rem 0 2rem 0;
+                gap: 2rem;
             }
-            .profile-pic {
-                width: 120px;
-                height: 120px;
+            .profile-img {
+                width: 140px;
+                height: 140px;
                 border-radius: 50%;
+                margin: 0 auto;
             }
-            h1 {
-                font-size: 2.4rem;
-                margin-left: auto; 
-                margin-right: auto;
+            .scholarly-actions {
+                justify-content: center;
             }
-            .subtitle-container {
-                justify-content: center; 
+            .academic-affiliation {
+                justify-content: center;
             }
-            #about {
-                padding: 1.5rem;
+            .timeline-item {
+                flex-direction: column;
+                gap: 0.5rem;
             }
-            .project-card {
-                max-width: 100%; 
+            .rp-title-group {
+                flex-direction: column;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -317,158 +616,513 @@
 <body>
 
     <div class="container">
+        
+        <!-- Header -->
         <header>
-            <div class="header-text">
+            <div class="header-content">
                 <h1>Juan Manuel Ramírez Rivas</h1>
-                <div class="subtitle-container">
-                    <div class="subtitle">Mathematics Graduate & ML Enthusiast</div>
-                    <div class="header-socials">
-                        <a href="https://github.com/Juanmales115" target="_blank" class="social-circle" title="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        </a>
-                        <a href="https://linkedin.com/in/juanma-ramirez-rivas/" target="_blank" class="social-circle" title="LinkedIn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </a>
-                        <a href="mailto:juanmales115@gmail.com" class="social-circle" title="Email">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        </a>
-                    </div>
+                
+                <div class="academic-affiliation">
+                    <span>Mathematician</span>
+                    <span>•</span>
+                    <span>University of Granada (UGR)</span>
+                </div>
+                
+                <p class="academic-summary">
+                    Mathematician working in Probabilistic Machine Learning, Diffusion Models and Computer Vision, with an interest in Computational Topology. Working to build and translate abstract mathematical theories into practical and real models.
+                </p>
+
+                <div class="scholarly-actions">
+                    <a href="https://github.com/Juanmales115" target="_blank" class="btn-action btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span>GitHub Repositories</span>
+                    </a>
+                    <a href="https://linkedin.com/in/juanma-ramirez-rivas/" target="_blank" class="btn-action btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:juanmales115@gmail.com" class="btn-action btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span>Contact</span>
+                    </a>
                 </div>
             </div>
-            <img src="./FotoMia_portfolio.png" alt="Foto de Juan Manuel Ramírez Rivas" class="profile-pic">
+
+            <div class="profile-wrapper">
+                <img src="./assets/img/FotoMia_portfolio.png" alt="Juan Manuel Ramírez Rivas" class="profile-img">
+            </div>
         </header>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p style="margin: 0;">
-                I am a Mathematics graduate at the University of Granada with a deep interest in how abstract mathematical concepts can be transformed into scalable Data Science solutions. My academic background has equipped me with strong <b>logical thinking</b> and advanced <b>problem-solving skills</b>, which I am now applying to the fields of <b>Machine Learning</b> and <b>Data Analytics</b>.
-                <br><br>
-                I am currently improving my skills in <b>Python, SQL, and Statistical Analysis</b>. My practical experience includes developing predictive models, such as a Stacking ensemble that reached the global <b>Top 27 in a Kaggle competition</b>, and building <b>end-to-end ETL pipelines</b> for energy market analysis.
-                <br><br>
-                In January 2026 I completed the <b>Google Cloud Data Analytics Certificate</b> which taught me cloud-based data management (BigQuery, SQL, Docker, Looker).
-                I have also taken part of the "Proyecto Ambassador: Computación Cuántica" where I learnt the <b>Quantum computing fundamentals</b>. In addition, I applied what I learnt to the data science field, by doing a <b>quantum machine learning variational classifier</b>.
-            </p>
+        <!-- Section 1: Research Interests (Vision + Topology ONLY) -->
+        <section id="research-interests">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-num">01.</span>
+                    <span>Research Interests & Core Directions</span>
+                </h2>
+                <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">Primary Focus</span>
+            </div>
+            
+            <div class="interests-grid">
+                
+                <!-- Interest 1: Probabilistic Models in Computer Vision -->
+                <div class="interest-card">
+                    <div class="interest-header">
+                        <div class="interest-icon-badge icon-badge-vision">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <h3 class="interest-title">Probabilistic Models in Computer Vision</h3>
+                    </div>
+                    <div class="interest-formula">$\frac{dx_t}{dt} = v_\theta(x_t, t), \quad x_t = (1-t)x_0 + t x_1$</div>
+                    <p class="interest-desc">
+                        Generative diffusion models (DDPM, SGM) and Continuous Flow Matching applied to visual synthesis, representation learning, and geometric image processing. Formulation of optimal transport trajectories.
+                    </p>
+                </div>
+
+                <!-- Interest 2: Computational Topology & TDA -->
+                <div class="interest-card">
+                    <div class="interest-header">
+                        <div class="interest-icon-badge icon-badge-topology">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><line x1="8.5" y1="7.5" x2="15.5" y2="7.5"/><line x1="7.5" y1="8.5" x2="10.5" y2="15.5"/><line x1="16.5" y1="8.5" x2="13.5" y2="15.5"/></svg>
+                        </div>
+                        <h3 class="interest-title">Computational Topology & TDA</h3>
+                    </div>
+                    <div class="interest-formula">$H_k(K) = \ker(\partial_k) / \operatorname{im}(\partial_{k+1}), \quad \beta_k = \dim(H_k)$</div>
+                    <p class="interest-desc">
+                        Persistent homology, multi-scale Vietoris-Rips and Čech simplicial complexes, and Topological Data Analysis (TDA). Characterizing coordinate-free topological invariants, barcode persistence diagrams, and topological regularization across deep neural representations.
+                    </p>
+                </div>
+
+            </div>
         </section>
 
-        <section id="projects">
-            <h2>Key Projects</h2>
-            <div class="projects-grid">
+        <!-- Section 2: Selected Research & Deep Technical Implementations -->
+        <section id="selected-research">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-num">02.</span>
+                    <span>Research Implementations & Mathematical Models</span>
+                </h2>
+                <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">PyTorch / Qiskit / Scikit-learn</span>
+            </div>
+
+            <div class="research-projects">
+
+                <!-- Project 1: Full-Covariance Gaussian VAE -->
+                <article class="rp-card">
+                    <div class="rp-header">
+                        <div class="rp-title-group">
+                            <!-- Minimalist Icon: Continuous Gaussian Density Distribution Curve -->
+                            <div class="rp-area-icon area-icon-vae" title="Gaussian Probability Density">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M3 19c4 0 5-1 6.5-7.5 1-4 1.5-6.5 2.5-6.5s1.5 2.5 2.5 6.5c1.5 6.5 2.5 7.5 6.5 7.5"/></svg>
+                            </div>
+                            <div>
+                                <span class="rp-badge badge-math">Probabilistic Deep Learning</span>
+                                <h3 class="rp-title">
+                                    <a href="https://github.com/Juanmales115/VAE_MNIST" target="_blank">Gaussian VAE with Full Covariance via Cholesky Factorization</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="rp-links">
+                            <a href="https://github.com/Juanmales115/VAE_MNIST" target="_blank" class="rp-link">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <span>Code & Derivations</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="rp-body">
+                        Standard Variational Autoencoders enforce a mean-field assumption where the approximate posterior covariance is constrained to be diagonal ($\Sigma_\theta(x) = \text{diag}(\sigma_1^2, \dots, \sigma_d^2)$), discarding pairwise correlations between latent dimensions. In this PyTorch project, I parameterized a full covariance posterior matrix $\Sigma_\theta(x) \in \mathbb{R}^{d \times d}$ while guaranteeing positive definiteness through its lower-triangular Cholesky factor $L(x)$:
+                    </p>
+
+                    <div class="math-callout">
+                        <b>Analytical Formulation:</b>
+                        $$\Sigma_\theta(x) = L(x) L(x)^T, \quad \text{with } L_{ii} = \exp(l_{ii}) > 0 \quad \text{and reparameterization } z = \mu_\theta(x) + L(x)\epsilon, \; \epsilon \sim \mathcal{N}(0, I_d)$$
+                        The encoder network predicts the mean $\mu_\theta(x) \in \mathbb{R}^d$ and $\frac{d(d+1)}{2}$ lower-triangular entries with exponential diagonal stabilization. This enables closed-form analytical computation of the Kullback-Leibler divergence against standard Gaussian priors without numerical matrix inversion instability.
+                    </div>
+
+                    <div class="rp-footer">
+                        <div class="rp-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Variational Inference</span>
+                            <span class="tag">Cholesky Factorization</span>
+                            <span class="tag">Linear Algebra</span>
+                            <span class="tag">ELBO Derivation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Variational Quantum Classifier (Explicitly modeled details) -->
+                <article class="rp-card">
+                    <div class="rp-header">
+                        <div class="rp-title-group">
+                            <!-- Minimalist Icon: Bloch Sphere with Qubit State Vector |psi> -->
+                            <div class="rp-area-icon area-icon-qml" title="Bloch Sphere & Qubit State">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <ellipse cx="12" cy="12" rx="9" ry="3.2"/>
+                                    <line x1="12" y1="12" x2="16.5" y2="5.5"/>
+                                    <polyline points="13.5 5.5 16.5 5.5 16.5 8.5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="rp-badge badge-quantum">Quantum Information & QML</span>
+                                <h3 class="rp-title">
+                                    <a href="https://github.com/Juanmales115/Qiskit_Variational_Quantum_Classifier" target="_blank">Variational Quantum Classifier (VQC) with Hardware-Efficient Ansatz</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="rp-links">
+                            <a href="https://github.com/Juanmales115/Qiskit_Variational_Quantum_Classifier" target="_blank" class="rp-link">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <span>Code & Qiskit Notebook</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="rp-body">
+                        Developed as part of the selected <em>"Proyecto Ambassador: Computación Cuántica"</em> using Qiskit on the IRIS benchmark dataset. Features are mapped onto the Bloch sphere using an amplitude/rotation encoding with single-qubit $R_X$ and $R_Y$ gates scaled in $[-\frac{\pi}{2}, \frac{\pi}{2}]$, coupled with PCA preprocessing to match qubit budget constraints and mitigate quantum decoherence noise.
+                    </p>
+
+                    <div class="math-callout quantum">
+                        <b>Explicit Circuit Design & Multi-Class Architecture:</b>
+                        <ul style="margin: 0.35rem 0 0 1.25rem; padding: 0;">
+                            <li><b>Feature Encoding:</b> Single-qubit rotations per feature ($R_X(x_i \cdot \frac{\pi}{2})$ and $R_Y(x_i \cdot \frac{\pi}{2})$) mapping classical inputs into quantum state amplitudes.</li>
+                            <li><b>Hardware-Efficient Ansatz:</b> Parameterized single-layer <code>EfficientSU2</code> ($R_X$ rotations, <code>reps=1</code>) with linear CNOT entanglement to preserve minimal circuit depth.</li>
+                            <li><b>One-vs-Rest (OvR) Decomposition:</b> Solved Qiskit VQC multiclass limitations by decoupling the 3-species classification into independent binary quantum models trained via COBYLA and SPSA optimizers.</li>
+                        </ul>
+                    </div>
+
+                    <div class="rp-footer">
+                        <div class="rp-tags">
+                            <span class="tag">IBM Qiskit</span>
+                            <span class="tag">EfficientSU2 Ansatz</span>
+                            <span class="tag">Bloch Sphere Rotations</span>
+                            <span class="tag">One-vs-Rest (OvR)</span>
+                            <span class="tag">COBYLA & SPSA</span>
+                            <span class="tag">Noise Mitigation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Kaggle Stacking Ensemble -->
+                <article class="rp-card">
+                    <div class="rp-header">
+                        <div class="rp-title-group">
+                            <!-- Minimalist Icon: Multi-Model Convergent Stacking Graph -->
+                            <div class="rp-area-icon area-icon-ensemble" title="Stacking Meta-Learning Convergence">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="5" cy="5" r="2.5"/>
+                                    <circle cx="5" cy="12" r="2.5"/>
+                                    <circle cx="5" cy="19" r="2.5"/>
+                                    <circle cx="19" cy="12" r="3"/>
+                                    <path d="M7.5 5.8L16.2 10.8"/>
+                                    <path d="M7.5 12h8.5"/>
+                                    <path d="M7.5 18.2l8.7-5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="rp-badge badge-ensemble">Competitive Machine Learning</span>
+                                <h3 class="rp-title">
+                                    <a href="https://github.com/Juanmales115/HousePrices-ML" target="_blank">Hierarchical Stacking Ensemble (Global Top 27 / Top 0.5% Kaggle)</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="rp-links">
+                            <a href="https://github.com/Juanmales115/HousePrices-ML" target="_blank" class="rp-link">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <span>GitHub Repository</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="rp-body">
+                        Engineered a multi-tier stacking ensemble combining gradient boosted decision trees (CatBoost, XGBoost) with regularized linear meta-estimators (Ridge). Handled extreme multicollinearity and target skewness through Box-Cox/log power transforms and strict out-of-fold blending schemes to eliminate data leakage.
+                    </p>
+
+                    <div class="math-callout ensemble">
+                        <b>Methodological Highlights:</b>
+                        Custom modular Scikit-learn preprocessing pipelines, Mahalanobis outlier detection thresholds, and robust cross-validation variance reduction yielding an RMSLE of 0.12193 and a <b>Global Top 27 leaderboard ranking</b>.
+                    </div>
+
+                    <div class="rp-footer">
+                        <div class="rp-tags">
+                            <span class="tag">Top 27 Kaggle Global</span>
+                            <span class="tag">Stacking Generalization</span>
+                            <span class="tag">CatBoost & XGBoost</span>
+                            <span class="tag">Scikit-learn Pipelines</span>
+                            <span class="tag">Cross-Validation Theory</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Data Engineering & Descriptive Statistics -->
+        <section id="applied-systems">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-num">03.</span>
+                    <span>Data Engineering & Descriptive Statistics</span>
+                </h2>
+                <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">Pipelines & Diagnostics</span>
+            </div>
+
+            <div class="applied-grid">
                 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon icon-forecasting">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                        </div>
-                        <h3 class="project-title">
-                            <a href="https://github.com/Juanmales115/EnergyForecasting" target="_blank">Energy Price Forecasting</a>
+                <div class="applied-card">
+                    <div>
+                        <span class="rp-badge badge-stats">Time Series & ETL</span>
+                        <h3 class="rp-title" style="font-size: 1.15rem; margin-top: 0.5rem;">
+                            <a href="https://github.com/Juanmales115/EnergyForecasting" target="_blank">Energy Price Forecasting Pipeline</a>
                         </h3>
+                        <p class="rp-body" style="font-size: 0.88rem; margin: 0.75rem 0;">
+                            Constructed an automated end-to-end data pipeline streaming electricity grid market APIs into a normalized SQLite database. Modeled non-stationary price dynamics using lag-engineered features and CatBoost ensemble forecasting.
+                        </p>
                     </div>
-                    <p class="project-desc">Engineered an automated End-to-End pipeline to ingest API data into SQLite. Developed a hybrid stacking model to forecast electricity prices.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">CatBoost</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">ETL</span>
-                        <span class="tech-tag">Stacking</span>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon icon-ensemble">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                        </div>
-                        <h3 class="project-title">
-                            <a href="https://github.com/Juanmales115/HousePrices-ML" target="_blank">Ensemble Model Kaggle</a>
-                        </h3>
-                    </div>
-                    <p class="project-desc">Developed a Stacking ensemble model combining XGBoost, CatBoost, and Ridge. Implemented Scikit-learn pipelines with custom transformers.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">XGBoost</span>
-                        <span class="tech-tag">CatBoost</span>
-                        <span class="tech-tag">Scikit-learn</span>
+                    <div class="rp-tags" style="margin-top: 1rem;">
+                        <span class="tag">CatBoost</span>
+                        <span class="tag">Time Series</span>
+                        <span class="tag">ETL Engineering</span>
+                        <span class="tag">SQL</span>
                     </div>
                 </div>
 
-                <!-- Tarjeta 3: Átomo optimizado, más alto y menos comprimido (rx="4.5" ry="10.5") -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon icon-quantum">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.2" fill="currentColor"></circle><ellipse cx="12" cy="12" rx="4.5" ry="10.5" transform="rotate(45 12 12)"></ellipse><ellipse cx="12" cy="12" rx="4.5" ry="10.5" transform="rotate(-45 12 12)"></ellipse><ellipse cx="12" cy="12" rx="10.5" ry="4.5"></ellipse></svg>
-                        </div>
-                        <h3 class="project-title">
-                            <a href="https://github.com/Juanmales115/Qiskit_Variational_Quantum_Classifier" target="_blank">Variational Quantum Classifier</a>
+                <!-- Updated to Descriptive Statistics as requested -->
+                <div class="applied-card">
+                    <div>
+                        <span class="rp-badge badge-stats">Descriptive Statistics</span>
+                        <h3 class="rp-title" style="font-size: 1.15rem; margin-top: 0.5rem;">
+                            <a href="https://github.com/Juanmales115/Madrid_AirQuality" target="_blank">Environmental Correlation Analysis</a>
                         </h3>
+                        <p class="rp-body" style="font-size: 0.88rem; margin: 0.75rem 0;">
+                            Exploratory descriptive multivariate investigation of urban atmospheric contaminant records. Examined Pearson and Spearman correlation matrices, dispersion measures, temporal trends, and bivariate distribution patterns.
+                        </p>
                     </div>
-                    <p class="project-desc">Project for "Proyecto Ambassador: Computación Cuántica". A variational quantum classifier for IRIS dataset exploring QML potentials.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Qiskit</span>
-                        <span class="tech-tag">Quantum</span>
+                    <div class="rp-tags" style="margin-top: 1rem;">
+                        <span class="tag">Descriptive Statistics</span>
+                        <span class="tag">Correlation Matrices</span>
+                        <span class="tag">EDA</span>
+                        <span class="tag">Python</span>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon icon-generic">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                        </div>
-                        <h3 class="project-title">
-                            <a href="https://github.com/Juanmales115/Airline_Delay" target="_blank">Flight Data Analysis</a>
+                <div class="applied-card">
+                    <div>
+                        <span class="rp-badge badge-stats">Exploratory Analysis</span>
+                        <h3 class="rp-title" style="font-size: 1.15rem; margin-top: 0.5rem;">
+                            <a href="https://github.com/Juanmales115/Airline_Delay" target="_blank">Commercial Flight Delay Diagnostics</a>
                         </h3>
+                        <p class="rp-body" style="font-size: 0.88rem; margin: 0.75rem 0;">
+                            Large-scale diagnostic exploration evaluating root causes of logistical flight delays across carriers using variance decomposition, feature attribution, and quantitative visualization.
+                        </p>
                     </div>
-                    <p class="project-desc">Analyzed flight data to investigate root causes of delays and evaluated performance metrics by airline.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Data Visualization</span>
-                        <span class="tech-tag">Statistics</span>
-                        <span class="tech-tag">Analysis</span>
-                    </div>
-                </div>  
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon icon-generic">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2-9 5 18 3-10 2 3h4"></path></svg>
-                        </div>
-                        <h3 class="project-title">
-                            <a href="https://github.com/Juanmales115/Madrid_AirQuality" target="_blank">Env. Data Correlation</a>
-                        </h3>
-                    </div>
-                    <p class="project-desc">Explored environmental data revealing correlation patterns between substances and demonstrating trends using regression techniques.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Regression</span>
-                        <span class="tech-tag">Statistics</span>
-                        <span class="tech-tag">Python</span>
+                    <div class="rp-tags" style="margin-top: 1rem;">
+                        <span class="tag">Diagnostic Analysis</span>
+                        <span class="tag">Data Visualization</span>
+                        <span class="tag">Statistics</span>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- Section 4: Academic Background & Credentials -->
+        <section id="education">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-num">04.</span>
+                    <span>Academic Background & Credentials</span>
+                </h2>
+                <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">Degrees & Certifications</span>
+            </div>
+
+            <div class="timeline">
+                
+                <!-- Master UGR (Computer Vision Specialization) -->
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="timeline-title">M.Sc. in Data Science and Computer Engineering</h3>
+                        <div class="timeline-institution">University of Granada (UGR) — Specialization in Computer Vision</div>
+                        <p class="timeline-desc">
+                            Advanced postgraduate program focusing on <b>Computer Vision</b>, deep neural architectures (CNNs, Vision Transformers), generative image models, 3D vision, and high-performance scientific computing.
+                        </p>
+                    </div>
+                    <div class="timeline-date">2026 – Present</div>
+                </div>
+
+                <!-- Degree in Mathematics -->
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="timeline-title">B.Sc. in Mathematics (Grado en Matemáticas)</h3>
+                        <div class="timeline-institution">University of Granada (UGR) • GPA / Mark: 7.84 / 10</div>
+                        <p class="timeline-desc">
+                            Comprehensive mathematical curriculum: Abstract Algebra, General and Algebraic Topology, Differential Geometry, Real & Complex Analysis, Measure Theory, Probability & Mathematical Statistics, and Numerical Optimization.
+                        </p>
+                    </div>
+                    <div class="timeline-date">Sep. 2022 – 2026</div>
+                </div>
+
+                <!-- GCP & DeepMind AI Research Foundations (Oct. 2026 - Present) -->
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="timeline-title">Google Cloud Platform & DeepMind AI Research Foundations</h3>
+                        <div class="timeline-institution">Google Cloud Platform / DeepMind Training</div>
+                        <p class="timeline-desc">
+                            Specialized program covering core artificial intelligence research methodology, scalable distributed computing on Google Cloud, reproducible experiment tracking, and high-performance deep learning workflows.
+                        </p>
+                    </div>
+                    <div class="timeline-date">Oct. 2026 – Present</div>
+                </div>
+
+                <!-- Quantum Computing Ambassador Program -->
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="timeline-title">Quantum Computing Ambassador Program (Programa Ambassador)</h3>
+                        <div class="timeline-institution">Selective Fellowship in Quantum Information & QML</div>
+                        <p class="timeline-desc">
+                            Selected participant in advanced quantum computing program. Covered quantum gate models, quantum decoherence mitigation, quantum machine learning and implementation of variational quantum circuits with Qiskit.
+                        </p>
+                    </div>
+                    <div class="timeline-date">Feb. 2026 – Jun. 2026</div>
+                </div>
+
+                <!-- Google Cloud Data Analytics Certificate -->
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="timeline-title">Google Cloud Professional Data Analytics Certificate</h3>
+                        <div class="timeline-institution">Google Cloud Training</div>
+                        <p class="timeline-desc">
+                            Cloud data governance and management: BigQuery SQL query optimization, scalable ETL pipeline, Docker containerization, Dataplex, Analytics Hub, and Looker dashboards.
+                        </p>
+                    </div>
+                    <div class="timeline-date">Oct. 2025 – Jan. 2026</div>
+                </div>
+
+                <!-- Language Certification -->
+                <div class="timeline-item">
+                    <div>
+                        <h3 class="timeline-title">Language Proficiency: B2 First Certificate</h3>
+                        <div class="timeline-institution">Cambridge English Language Assessment</div>
+                    </div>
+                    <div class="timeline-date">B2 Certified</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 5: Methodological & Technical Competencies -->
         <section id="skills">
-            <h2>Technical Core & Systems</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Python (Pandas / NumPy)</div>
-                <div class="skill-item">Scikit-learn Pipelines</div>
-                <div class="skill-item">XGBoost & CatBoost</div>
-                <div class="skill-item">Time Series Forecasting</div>
-                <div class="skill-item">SQL & Advanced Queries</div>
-                <div class="skill-item">Git / GitHub Production</div>
-                <div class="skill-item">Statistical Inference & Testing</div>
-                <div class="skill-item">Google BigQuery</div>
-                <div class="skill-item">Looker & Docker</div> 
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-num">05.</span>
+                    <span>Methodological & Technical Competencies</span>
+                </h2>
+                <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">Skills Matrix</span>
+            </div>
+
+            <div class="skills-category-grid">
+                
+                <div class="skill-group">
+                    <div class="skill-group-title">
+                        <span>// Theoretical Foundations</span>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-row">
+                            <span>Computational Topology</span>
+                            <span>Persistent Homology, TDA</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Generative Modeling</span>
+                            <span>VAE, Flow Matching</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Linear Algebra & Factorizations</span>
+                            <span>Cholesky, SVD, QR</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Bayesian & Variational Inference</span>
+                            <span>ELBO, KL-Divergence</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Optimization Methods</span>
+                            <span>SGD, Adam, COBYLA, SPSA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-title">
+                        <span>// Frameworks & Modeling</span>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-row">
+                            <span>Deep Learning & Vision</span>
+                            <span>PyTorch, Torchvision</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Quantum Machine Learning</span>
+                            <span>Qiskit, Qiskit Machine Learning</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Gradient Boosting</span>
+                            <span>CatBoost, XGBoost</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Scientific Computing</span>
+                            <span>Scikit-learn, SciPy, NumPy</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Exploratory Data Analysis</span>
+                            <span>Pandas, Seaborn, Matplotlib, R</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-title">
+                        <span>// Infrastructure & Systems</span>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-row">
+                            <span>Database Systems & SQL</span>
+                            <span>SQLite, Advanced SQL Queries</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Google Cloud Platform</span>
+                            <span>BigQuery, Looker, Dataplex</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Containerization</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Version Control</span>
+                            <span>Git, GitHub</span>
+                        </div>
+                        <div class="skill-row">
+                            <span>Scientific Documentation</span>
+                            <span>LaTeX, Jupyter, Markdown</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
+        <!-- Footer -->
         <footer>
             <p>
                 <a href="https://github.com/Juanmales115" target="_blank">GitHub</a> • 
                 <a href="https://linkedin.com/in/juanma-ramirez-rivas/" target="_blank">LinkedIn</a> • 
-                <a href="mailto:juanmales115@gmail.com">Email</a>
+                <a href="mailto:juanmales115@gmail.com">juanmales115@gmail.com</a>
             </p>
-            <p>&copy; 2026 Juan Manuel Ramírez Rivas</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+                Designed for Mathematical & Research Machine Learning • &copy; 2026 Juan Manuel Ramírez Rivas
+            </p>
         </footer>
+
     </div>
 
 </body>

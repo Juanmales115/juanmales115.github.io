@@ -1,0 +1,12 @@
+# Private Documents & CVs
+*.pdf
+*CV*
+*cv*
+[Cc][Vv]*
+
+# OS and Editor Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
