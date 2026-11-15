@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#0c1217">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Research Portfolio of Juan Manuel Ramírez Rivas - Mathematician specializing in Probabilistic Machine Learning, Diffusion Models in Computer Vision, and Computational Topology.">
     <meta property="og:title" content="Juan Manuel Ramírez Rivas | Mathematical Machine Learning & Computer Vision">
@@ -12,7 +13,7 @@
     <!-- KaTeX for sharp mathematical typography -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
             onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
 
     <style>
@@ -21,15 +22,15 @@
             --bg-surface: #11141d;
             --bg-surface-elevated: #161a26;
             --bg-pill: rgba(255, 255, 255, 0.04);
-            
+
             --border-subtle: rgba(255, 255, 255, 0.08);
             --border-accent: rgba(99, 102, 241, 0.35);
             --border-hover: rgba(255, 255, 255, 0.22);
-            
+
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
-            
+
             --accent-math: #818cf8;      /* Indigo/Purple: Probabilistic ML & Deep Learning */
             --accent-vision: #38bdf8;    /* Cyan/Sky: Computer Vision & Diffusion */
             --accent-topology: #ec4899;  /* Rose/Pink: Computational Topology & TDA */
@@ -64,7 +65,7 @@
             left: 0;
             width: 100%;
             height: 720px;
-            background-image: 
+            background-image:
                 linear-gradient(to bottom, rgba(9, 10, 15, 0.45) 0%, var(--bg-canvas) 95%),
                 url('./assets/img/math.jpg');
             background-size: cover;
@@ -517,7 +518,7 @@
             border-radius: 6px;
         }
 
-        /* Methodological & Technical Competencies */
+        /* Tools & foundations */
         .skills-category-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -611,109 +612,119 @@
                 gap: 0.5rem;
             }
         }
+
+/* Proposed layout: local comparison version. */
+:root { --bg-canvas:#0c1217; --bg-surface:#121c24; --bg-surface-elevated:#17242d; --text-secondary:#b1bec9; --text-muted:#9aaaba; --accent-math:#9ddbd2; --border-subtle:#283740; --border-hover:#64837c; --font-sans:'Segoe UI',Arial,sans-serif; }
+* { box-sizing:border-box; } html { scroll-padding-top:100px; } body::before { height:800px; opacity:.13; background-image:linear-gradient(to bottom,rgba(12,18,23,.4),#0c1217 95%),url('./assets/img/math.jpg'); }
+.container { max-width:1160px; padding:0 36px 36px; }
+a:focus-visible, summary:focus-visible { outline:3px solid #9ddbd2; outline-offset:6px; border-radius:4px; }
+.skip-link { position:fixed; top:-100px; left:20px; z-index:20; background:#9ddbd2; color:#102420; padding:12px 20px; } .skip-link:focus { top:12px; }
+.site-nav { position:sticky; top:0; z-index:10; background:rgba(12,18,23,.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--border-subtle); }
+.nav-inner { max-width:1160px; margin:auto; padding:18px 36px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.wordmark { color:#e6eeed; text-decoration:none; font-weight:700; letter-spacing:-.04em; font-size:22px; } .wordmark span { color:#9ddbd2; }
+.nav-links { display:flex; gap:26px; flex-wrap:wrap; } .nav-links a { color:#b1bec9; text-decoration:none; font-size:13px; } .nav-links a:hover { color:white; }
+header { padding:76px 0 58px; gap:64px; align-items:center; } .eyebrow { color:var(--accent-math); font:12px var(--font-mono); text-transform:uppercase; letter-spacing:.15em; margin:0 0 22px; }
+h1 { font-size:clamp(2.5rem,5.2vw,4.3rem); font-weight:650; line-height:1.06; letter-spacing:-.055em; max-width:740px; } .hero-focus { font-size:clamp(1.2rem,2.5vw,1.7rem); color:#dce8e6; margin:22px 0 14px; font-weight:400; letter-spacing:-.02em; }
+.academic-affiliation { font-size:.87rem; color:#aebdc3; margin:18px 0; } .academic-summary { font-size:1rem; max-width:610px; margin:0 0 26px; }
+.profile-wrapper { width:240px; } .profile-img { width:240px; height:290px; border-radius:4px; box-shadow:16px 16px 0 #16272d; } .portrait-caption { font:11px var(--font-mono); color:#aebdc3; margin:26px 0 0; }
+.btn-action { border-radius:5px; font-size:13px; padding:11px 16px; min-height:44px; } .btn-primary { background:#9ddbd2; border-color:#9ddbd2; color:#102420; font-weight:650; } .btn-primary:hover { background:#bdebe5; border-color:#bdebe5; color:#102420; } .btn-secondary { color:#d4dfe3; }
+.research-strip { display:grid; grid-template-columns:repeat(3,1fr); border-bottom:1px solid var(--border-subtle); padding:24px 0; gap:24px; } .research-strip div { border-right:1px solid var(--border-subtle); padding-right:20px; } .research-strip div:last-child { border:0; } .research-strip strong { display:block; font-size:17px; font-weight:600; color:#e6eeed; } .research-strip span { display:block; font-size:12px; color:#aebdc3; margin-top:3px; }
+section { margin:66px 0; } .section-header { align-items:center; gap:24px; margin-bottom:24px; padding-bottom:18px; } .section-title { font-size:1.55rem; font-weight:600; } .section-num { font-size:12px; } .section-intro { color:#b1bec9; margin:-6px 0 28px; max-width:680px; font-size:15px; }
+.research-projects { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; align-items:start; } .rp-card { border-radius:6px; padding:27px; min-width:0; } .rp-header { display:block; margin-bottom:15px; } .rp-title-group { flex-direction:column; gap:16px; } .rp-title { font-size:1.23rem; line-height:1.4; letter-spacing:-.025em; } .rp-links { margin-top:20px; flex-wrap:wrap; } .rp-link { color:#d6e6e3; font-size:11px; min-height:40px; }
+.rp-body { font-size:14px; line-height:1.75; } .rp-badge { font-size:9px; letter-spacing:.04em; } .rp-footer { margin-top:20px; } .tag { font-size:10px; padding:4px 7px; } .rp-tags { gap:6px; }
+.project-detail { border-top:1px solid var(--border-subtle); margin-top:20px; padding-top:13px; } .project-detail summary { cursor:pointer; font-size:12px; color:#9ddbd2; padding:5px 0; } .project-detail[open] summary { margin-bottom:12px; } .project-detail .rp-body { font-size:13px; } .math-callout { font-size:12px; padding:12px; overflow-x:auto; } .katex-display { overflow-x:auto; overflow-y:hidden; padding:8px 0; }
+.interest-card,.applied-card,.skill-group { border-radius:6px; padding:24px; } .interest-title { font-size:1rem; } .interest-formula { overflow-x:auto; } .interest-desc { font-size:14px; } .interest-card:hover,.applied-card:hover { transform:none; } .interests-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; } .applied-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.timeline { gap:0; border-left:1px solid #38504f; margin-left:6px; } .timeline-item { background:transparent; border:0; border-radius:0; padding:10px 0 30px 28px; position:relative; } .timeline-item::before { content:''; position:absolute; left:-4px; top:20px; width:7px; height:7px; border-radius:50%; background:#9ddbd2; } .timeline-title { font-size:1rem; } .timeline-desc { max-width:760px; font-size:14px; } .timeline-date { color:#afbec7; font-size:11px; }
+.skills-category-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; } .skill-group-title { font-size:11px; } .skill-row { flex-direction:column; align-items:flex-start; gap:4px; padding:10px 0; font-size:12px; } .skill-row span:last-child { color:#a9b8c1; }
+.contact-panel { display:flex; justify-content:space-between; align-items:center; gap:30px; border-top:1px solid #466461; border-bottom:1px solid var(--border-subtle); padding:40px 0; } .contact-panel h2 { font-size:clamp(1.6rem,3vw,2.3rem); margin:0 0 10px; font-weight:500; letter-spacing:-.04em; } .contact-panel p { color:#afbec7; margin:0; max-width:600px; font-size:14px; } footer { margin-top:40px; border:0; padding:0; font-size:12px; } footer p { line-height:2; }
+@media(max-width:900px) { header { gap:35px; } .profile-wrapper { width:190px; } .profile-img { width:190px; height:240px; } .applied-grid,.skills-category-grid { grid-template-columns:1fr; } .section-header>span { display:none; } }
+@media(max-width:768px) { .container { padding:0 20px 28px; } .nav-inner { padding:14px 20px; gap:14px; } .nav-links { gap:14px; } .nav-links a { font-size:11px; } header { text-align:left; flex-direction:column; align-items:flex-start; padding:42px 0 36px; } h1 { font-size:2.8rem; } .profile-wrapper { width:100%; display:flex; align-items:center; gap:24px; } .profile-img { width:104px; height:124px; border-radius:4px; margin:0; box-shadow:8px 8px 0 #16272d; } .portrait-caption { margin:0; } .scholarly-actions,.academic-affiliation { justify-content:flex-start; } .research-strip { gap:12px; } .research-strip div { padding-right:10px; } .research-strip strong { font-size:13px; } .research-strip span { font-size:11px; } .research-projects,.interests-grid { grid-template-columns:1fr; } .section-title { font-size:1.25rem; } section { margin:46px 0; } .contact-panel { flex-direction:column; align-items:flex-start; } .timeline-item { padding-left:20px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; animation:none!important; } }
+
+/* Team project metadata. */
+.project-context { margin:8px 0 0; color:#b1bec9; font-size:12px; }
+#one-safe-step .project-detail ul { color:#b1bec9; padding-left:20px; font-size:13px; line-height:1.8; }
+
     </style>
 </head>
-<body>
+<body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner">
+        <a class="wordmark" href="#top" aria-label="Juan Manuel, back to top">JM<span>.</span></a>
+        <div class="nav-links"><a href="#selected-research">Projects</a><a href="#research-interests">Research</a><a href="#education">Background</a><a href="#contact">Contact</a></div>
+    </div></nav>
 
     <div class="container">
-        
+
         <!-- Header -->
         <header>
             <div class="header-content">
+                <p class="eyebrow">Mathematics / Machine Learning</p>
                 <h1>Juan Manuel Ramírez Rivas</h1>
-                
+                <p class="hero-focus">From mathematical structure<br>to machine learning models.</p>
+
                 <div class="academic-affiliation">
                     <span>Mathematician</span>
                     <span>•</span>
                     <span>University of Granada (UGR)</span>
                 </div>
-                
+
                 <p class="academic-summary">
-                    Mathematician working in Probabilistic Machine Learning, Diffusion Models and Computer Vision, with an interest in Computational Topology. Working to build and translate abstract mathematical theories into practical and real models.
+                    I explore probabilistic machine learning, computer vision and computational topology. My work connects abstract mathematical ideas with practical implementations, from generative models to quantum classifiers.
                 </p>
 
                 <div class="scholarly-actions">
-                    <a href="https://github.com/Juanmales115" target="_blank" class="btn-action btn-primary">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <a href="#selected-research" class="btn-action btn-primary">Explore my work <span aria-hidden="true">↗</span></a>
+                    <a href="./CV-Espa%C3%B1ol%20(1).pdf" target="_blank" rel="noopener noreferrer" class="btn-action btn-secondary">CV <span lang="es">(Español)</span> <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/Juanmales115" target="_blank" rel="noopener noreferrer" class="btn-action btn-secondary">
+                        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                         <span>GitHub Repositories</span>
                     </a>
-                    <a href="https://linkedin.com/in/juanma-ramirez-rivas/" target="_blank" class="btn-action btn-secondary">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    <a href="https://linkedin.com/in/juanma-ramirez-rivas/" target="_blank" rel="noopener noreferrer" class="btn-action btn-secondary">
+                        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                         <span>LinkedIn</span>
                     </a>
                     <a href="mailto:juanmales115@gmail.com" class="btn-action btn-secondary">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                         <span>Contact</span>
                     </a>
                 </div>
             </div>
 
             <div class="profile-wrapper">
-                <img src="./assets/img/FotoMia_portfolio.png" alt="Juan Manuel Ramírez Rivas" class="profile-img">
+                <img src="./assets/img/FotoMia_portfolio.png" alt="Juan Manuel Ramírez Rivas" class="profile-img" width="240" height="290" fetchpriority="high" decoding="async">
+                <p class="portrait-caption">Juan Manuel Ramírez Rivas<br>University of Granada</p>
             </div>
         </header>
+        <div class="research-strip" aria-label="Portfolio overview">
+            <div><strong>Mathematical foundations</strong><span>Algebra, topology & probability</span></div>
+            <div><strong>Models in code</strong><span>PyTorch, Qiskit & Scikit-learn</span></div>
+            <div><strong>Theory into practice</strong><span>Derivations, notebooks & pipelines</span></div>
+        </div><main id="main">
 
         <!-- Section 1: Research Interests (Vision + Topology ONLY) -->
-        <section id="research-interests">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="section-num">01.</span>
-                    <span>Research Interests & Core Directions</span>
-                </h2>
-                <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">Primary Focus</span>
-            </div>
-            
-            <div class="interests-grid">
-                
-                <!-- Interest 1: Probabilistic Models in Computer Vision -->
-                <div class="interest-card">
-                    <div class="interest-header">
-                        <div class="interest-icon-badge icon-badge-vision">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                        </div>
-                        <h3 class="interest-title">Probabilistic Models in Computer Vision</h3>
-                    </div>
-                    <div class="interest-formula">$\frac{dx_t}{dt} = v_\theta(x_t, t), \quad x_t = (1-t)x_0 + t x_1$</div>
-                    <p class="interest-desc">
-                        Generative diffusion models (DDPM, SGM) and Continuous Flow Matching applied to visual synthesis, representation learning, and geometric image processing. Formulation of optimal transport trajectories.
-                    </p>
-                </div>
 
-                <!-- Interest 2: Computational Topology & TDA -->
-                <div class="interest-card">
-                    <div class="interest-header">
-                        <div class="interest-icon-badge icon-badge-topology">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><line x1="8.5" y1="7.5" x2="15.5" y2="7.5"/><line x1="7.5" y1="8.5" x2="10.5" y2="15.5"/><line x1="16.5" y1="8.5" x2="13.5" y2="15.5"/></svg>
-                        </div>
-                        <h3 class="interest-title">Computational Topology & TDA</h3>
-                    </div>
-                    <div class="interest-formula">$H_k(K) = \ker(\partial_k) / \operatorname{im}(\partial_{k+1}), \quad \beta_k = \dim(H_k)$</div>
-                    <p class="interest-desc">
-                        Persistent homology, multi-scale Vietoris-Rips and Čech simplicial complexes, and Topological Data Analysis (TDA). Characterizing coordinate-free topological invariants, barcode persistence diagrams, and topological regularization across deep neural representations.
-                    </p>
-                </div>
-
-            </div>
-        </section>
 
         <!-- Section 2: Selected Research & Deep Technical Implementations -->
         <section id="selected-research">
             <div class="section-header">
                 <h2 class="section-title">
-                    <span class="section-num">02.</span>
-                    <span>Research Implementations & Mathematical Models</span>
+                    <span class="section-num">01.</span>
+                    <span>Selected work</span>
                 </h2>
-                <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">PyTorch / Qiskit / Scikit-learn</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">Mathematics / ML / Scientific Computing</span>
             </div>
 
             <div class="research-projects">
 
+
+
                 <!-- Project 0: Bachelor's Thesis (TFG) - Highest Honors -->
-                <article class="rp-card">
+                <article class="rp-card" id="project-1">
                     <div class="rp-header">
                         <div class="rp-title-group">
                             <div class="rp-area-icon" style="background: rgba(129, 140, 248, 0.12); border: 1px solid rgba(129, 140, 248, 0.25); color: var(--accent-math);" title="Category Theory & Sheaf Duality">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="5" r="3"/>
                                     <circle cx="5" cy="19" r="3"/>
                                     <circle cx="19" cy="19" r="3"/>
@@ -728,23 +739,22 @@
                                     <span class="rp-badge" style="background: rgba(251, 191, 36, 0.15); color: #fde68a; border: 1px solid rgba(251, 191, 36, 0.35);">Grade: 9.9 / 10 • Matrícula de Honor</span>
                                 </div>
                                 <h3 class="rp-title">
-                                    <a href="https://drive.google.com/file/d/1sHsGIVNfjZR7440nuxLk3FUjyuki3ZG5/view?usp=sharing" target="_blank">Locally Constant Sheaves & Tannaka Duality (Bachelor's Thesis)</a>
+                                    <a href="https://drive.google.com/file/d/1sHsGIVNfjZR7440nuxLk3FUjyuki3ZG5/view?usp=sharing" target="_blank" rel="noopener noreferrer">Locally Constant Sheaves & Tannaka Duality (Bachelor's Thesis)</a>
                                 </h3>
                             </div>
                         </div>
                         <div class="rp-links">
-                            <a href="https://drive.google.com/file/d/1sHsGIVNfjZR7440nuxLk3FUjyuki3ZG5/view?usp=sharing" target="_blank" class="rp-link">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            <a href="https://drive.google.com/file/d/1sHsGIVNfjZR7440nuxLk3FUjyuki3ZG5/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="rp-link">
+                                <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                                 <span>Read Thesis (PDF)</span>
                             </a>
                         </div>
                     </div>
 
-                    <p class="rp-body">
+                    <p class="rp-body">An exploration of how locally constant sheaves, fundamental group representations and Tannaka duality connect. Bachelor’s thesis in pure mathematics, awarded 9.9/10 with Matrícula de Honor.</p>
+<details class="project-detail"><summary>Mathematical details & methodology</summary><p class="rp-body">
                         108-page pure mathematics research thesis advised by Prof. Laiachi El Kaoutit Zerri (Department of Algebra, UGR). Establishes how local systems—sheaves of locally constant rank on a topological space $X$—are categorically equivalent to finite-dimensional representations of the fundamental group $\pi_1(X, x_0)$ via Tannakian reconstruction and monodromy actions, with direct applications to Differential Galois Theory (Picard-Vessiot).
-                    </p>
-
-                    <div class="math-callout">
+                    </p><div class="math-callout">
                         <b>Core Theoretical Framework & Main Results:</b>
                         <ul style="margin: 0.35rem 0 0 1.25rem; padding: 0;">
                             <li><b>Tannakian Categories & Monoidal Geometry:</b> Rigorous formulation of rigid monoidal tensor categories $(\mathcal{C}, \otimes, I)$, coherence diagrams (pentagonal and hexagonal), dual objects, and internal homs.</li>
@@ -752,7 +762,7 @@
                             <li><b>Local Systems & Sheaf Monodromy:</b> Demonstrated that locally constant sheaves form a neutral Tannakian category where stalk evaluation $\omega_{x_0}(\mathcal{F}) = \mathcal{F}_{x_0}$ serves as the fiber functor. Characterized the monodromy action $\rho: \pi_1(X, x_0) \to \mathbf{GL}(\mathcal{F}_{x_0})$ and computed explicit reconstructed groups for spheres $S^n$, real projective spaces $\mathbb{RP}^2$ (non-orientability), and $S^1$.</li>
                             <li><b>Differential Galois Theory (Picard-Vessiot):</b> Proved that the differential Galois group of a linear differential equation is isomorphic to the reconstructed Tannaka group of the category generated by its differential module.</li>
                         </ul>
-                    </div>
+                    </div></details>
 
                     <div class="rp-footer">
                         <div class="rp-tags">
@@ -768,37 +778,36 @@
                 </article>
 
                 <!-- Project 1: Full-Covariance Gaussian VAE -->
-                <article class="rp-card">
+                <article class="rp-card" id="project-2">
                     <div class="rp-header">
                         <div class="rp-title-group">
                             <!-- Minimalist Icon: Continuous Gaussian Density Distribution Curve -->
                             <div class="rp-area-icon area-icon-vae" title="Gaussian Probability Density">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M3 19c4 0 5-1 6.5-7.5 1-4 1.5-6.5 2.5-6.5s1.5 2.5 2.5 6.5c1.5 6.5 2.5 7.5 6.5 7.5"/></svg>
+                                <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M3 19c4 0 5-1 6.5-7.5 1-4 1.5-6.5 2.5-6.5s1.5 2.5 2.5 6.5c1.5 6.5 2.5 7.5 6.5 7.5"/></svg>
                             </div>
                             <div>
                                 <span class="rp-badge badge-math">Probabilistic Deep Learning</span>
                                 <h3 class="rp-title">
-                                    <a href="https://github.com/Juanmales115/VAE_MNIST" target="_blank">Gaussian VAE with Full Covariance via Cholesky Factorization</a>
+                                    <a href="https://github.com/Juanmales115/VAE_MNIST" target="_blank" rel="noopener noreferrer">Gaussian VAE with Full Covariance via Cholesky Factorization</a>
                                 </h3>
                             </div>
                         </div>
                         <div class="rp-links">
-                            <a href="https://github.com/Juanmales115/VAE_MNIST" target="_blank" class="rp-link">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            <a href="https://github.com/Juanmales115/VAE_MNIST" target="_blank" rel="noopener noreferrer" class="rp-link">
+                                <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                 <span>Code & Derivations</span>
                             </a>
                         </div>
                     </div>
 
-                    <p class="rp-body">
+                    <p class="rp-body">A PyTorch implementation that learns correlations between latent dimensions using a full covariance matrix. Cholesky factorization keeps the covariance positive definite and supports analytical KL divergence.</p>
+<details class="project-detail"><summary>Mathematical details & methodology</summary><p class="rp-body">
                         Standard Variational Autoencoders enforce a mean-field assumption where the approximate posterior covariance is constrained to be diagonal ($\Sigma_\theta(x) = \text{diag}(\sigma_1^2, \dots, \sigma_d^2)$), discarding pairwise correlations between latent dimensions. In this PyTorch project, I parameterized a full covariance posterior matrix $\Sigma_\theta(x) \in \mathbb{R}^{d \times d}$ while guaranteeing positive definiteness through its lower-triangular Cholesky factor $L(x)$:
-                    </p>
-
-                    <div class="math-callout">
+                    </p><div class="math-callout">
                         <b>Analytical Formulation:</b>
                         $$\Sigma_\theta(x) = L(x) L(x)^T, \quad \text{with } L_{ii} = \exp(l_{ii}) > 0 \quad \text{and reparameterization } z = \mu_\theta(x) + L(x)\epsilon, \; \epsilon \sim \mathcal{N}(0, I_d)$$
                         The encoder network predicts the mean $\mu_\theta(x) \in \mathbb{R}^d$ and $\frac{d(d+1)}{2}$ lower-triangular entries with exponential diagonal stabilization. This enables closed-form analytical computation of the Kullback-Leibler divergence against standard Gaussian priors without numerical matrix inversion instability.
-                    </div>
+                    </div></details>
 
                     <div class="rp-footer">
                         <div class="rp-tags">
@@ -812,12 +821,12 @@
                 </article>
 
                 <!-- Project 2: Variational Quantum Classifier (Explicitly modeled details) -->
-                <article class="rp-card">
+                <article class="rp-card" id="project-3">
                     <div class="rp-header">
                         <div class="rp-title-group">
                             <!-- Minimalist Icon: Bloch Sphere with Qubit State Vector |psi> -->
                             <div class="rp-area-icon area-icon-qml" title="Bloch Sphere & Qubit State">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="9"/>
                                     <ellipse cx="12" cy="12" rx="9" ry="3.2"/>
                                     <line x1="12" y1="12" x2="16.5" y2="5.5"/>
@@ -827,30 +836,29 @@
                             <div>
                                 <span class="rp-badge badge-quantum">Quantum Information & QML</span>
                                 <h3 class="rp-title">
-                                    <a href="https://github.com/Juanmales115/Qiskit_Variational_Quantum_Classifier" target="_blank">Variational Quantum Classifier (VQC) with Hardware-Efficient Ansatz</a>
+                                    <a href="https://github.com/Juanmales115/Qiskit_Variational_Quantum_Classifier" target="_blank" rel="noopener noreferrer">Variational Quantum Classifier (VQC) with Hardware-Efficient Ansatz</a>
                                 </h3>
                             </div>
                         </div>
                         <div class="rp-links">
-                            <a href="https://github.com/Juanmales115/Qiskit_Variational_Quantum_Classifier" target="_blank" class="rp-link">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            <a href="https://github.com/Juanmales115/Qiskit_Variational_Quantum_Classifier" target="_blank" rel="noopener noreferrer" class="rp-link">
+                                <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                 <span>Code & Qiskit Notebook</span>
                             </a>
                         </div>
                     </div>
 
-                    <p class="rp-body">
+                    <p class="rp-body">A variational quantum classifier for the Iris dataset, implemented in Qiskit. Combines rotation-based feature encoding, a compact parameterized circuit and one-vs-rest classification.</p>
+<details class="project-detail"><summary>Mathematical details & methodology</summary><p class="rp-body">
                         Developed as part of the selected <em>"Proyecto Ambassador: Computación Cuántica"</em> using Qiskit on the IRIS benchmark dataset. Features are mapped onto the Bloch sphere using an amplitude/rotation encoding with single-qubit $R_X$ and $R_Y$ gates scaled in $[-\frac{\pi}{2}, \frac{\pi}{2}]$, coupled with PCA preprocessing to match qubit budget constraints and mitigate quantum decoherence noise.
-                    </p>
-
-                    <div class="math-callout quantum">
+                    </p><div class="math-callout quantum">
                         <b>Explicit Circuit Design & Multi-Class Architecture:</b>
                         <ul style="margin: 0.35rem 0 0 1.25rem; padding: 0;">
                             <li><b>Feature Encoding:</b> Single-qubit rotations per feature ($R_X(x_i \cdot \frac{\pi}{2})$ and $R_Y(x_i \cdot \frac{\pi}{2})$) mapping classical inputs into quantum state amplitudes.</li>
                             <li><b>Hardware-Efficient Ansatz:</b> Parameterized single-layer <code>EfficientSU2</code> ($R_X$ rotations, <code>reps=1</code>) with linear CNOT entanglement to preserve minimal circuit depth.</li>
                             <li><b>One-vs-Rest (OvR) Decomposition:</b> Solved Qiskit VQC multiclass limitations by decoupling the 3-species classification into independent binary quantum models trained via COBYLA and SPSA optimizers.</li>
                         </ul>
-                    </div>
+                    </div></details>
 
                     <div class="rp-footer">
                         <div class="rp-tags">
@@ -865,12 +873,12 @@
                 </article>
 
                 <!-- Project 3: Kaggle Stacking Ensemble -->
-                <article class="rp-card">
+                <article class="rp-card" id="project-4">
                     <div class="rp-header">
                         <div class="rp-title-group">
                             <!-- Minimalist Icon: Multi-Model Convergent Stacking Graph -->
                             <div class="rp-area-icon area-icon-ensemble" title="Stacking Meta-Learning Convergence">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="5" cy="5" r="2.5"/>
                                     <circle cx="5" cy="12" r="2.5"/>
                                     <circle cx="5" cy="19" r="2.5"/>
@@ -883,26 +891,25 @@
                             <div>
                                 <span class="rp-badge badge-ensemble">Competitive Machine Learning</span>
                                 <h3 class="rp-title">
-                                    <a href="https://github.com/Juanmales115/HousePrices-ML" target="_blank">Hierarchical Stacking Ensemble (Global Top 27 / Top 0.5% Kaggle)</a>
+                                    <a href="https://github.com/Juanmales115/HousePrices-ML" target="_blank" rel="noopener noreferrer">Hierarchical Stacking Ensemble (Global Top 27 / Top 0.5% Kaggle)</a>
                                 </h3>
                             </div>
                         </div>
                         <div class="rp-links">
-                            <a href="https://github.com/Juanmales115/HousePrices-ML" target="_blank" class="rp-link">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            <a href="https://github.com/Juanmales115/HousePrices-ML" target="_blank" rel="noopener noreferrer" class="rp-link">
+                                <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                 <span>GitHub Repository</span>
                             </a>
                         </div>
                     </div>
 
-                    <p class="rp-body">
+                    <p class="rp-body">A stacking ensemble for house price prediction, combining CatBoost, XGBoost and Ridge regression. The project focuses on preprocessing, out-of-fold blending and validation.</p>
+<details class="project-detail"><summary>Mathematical details & methodology</summary><p class="rp-body">
                         Engineered a multi-tier stacking ensemble combining gradient boosted decision trees (CatBoost, XGBoost) with regularized linear meta-estimators (Ridge). Handled extreme multicollinearity and target skewness through Box-Cox/log power transforms and strict out-of-fold blending schemes to eliminate data leakage.
-                    </p>
-
-                    <div class="math-callout ensemble">
+                    </p><div class="math-callout ensemble">
                         <b>Methodological Highlights:</b>
                         Custom modular Scikit-learn preprocessing pipelines, Mahalanobis outlier detection thresholds, and robust cross-validation variance reduction yielding an RMSLE of 0.12193 and a <b>Global Top 27 leaderboard ranking</b>.
-                    </div>
+                    </div></details>
 
                     <div class="rp-footer">
                         <div class="rp-tags">
@@ -918,23 +925,65 @@
             </div>
         </section>
 
-        <!-- Section 3: Data Engineering & Descriptive Statistics -->
+                <section id="research-interests">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-num">02.</span>
+                    <span>Research directions</span>
+                </h2>
+                <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">Primary Focus</span>
+            </div>
+
+            <div class="interests-grid">
+
+                <!-- Interest 1: Probabilistic Models in Computer Vision -->
+                <div class="interest-card">
+                    <div class="interest-header">
+                        <div class="interest-icon-badge icon-badge-vision">
+                            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <h3 class="interest-title">Probabilistic Models in Computer Vision</h3>
+                    </div>
+                    <div class="interest-formula">$\frac{dx_t}{dt} = v_\theta(x_t, t), \quad x_t = (1-t)x_0 + t x_1$</div>
+                    <p class="interest-desc">
+                        Generative diffusion models (DDPM, SGM) and Continuous Flow Matching applied to visual synthesis, representation learning, and geometric image processing. Formulation of optimal transport trajectories.
+                    </p>
+                </div>
+
+                <!-- Interest 2: Computational Topology & TDA -->
+                <div class="interest-card">
+                    <div class="interest-header">
+                        <div class="interest-icon-badge icon-badge-topology">
+                            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><line x1="8.5" y1="7.5" x2="15.5" y2="7.5"/><line x1="7.5" y1="8.5" x2="10.5" y2="15.5"/><line x1="16.5" y1="8.5" x2="13.5" y2="15.5"/></svg>
+                        </div>
+                        <h3 class="interest-title">Computational Topology & TDA</h3>
+                    </div>
+                    <div class="interest-formula">$H_k(K) = \ker(\partial_k) / \operatorname{im}(\partial_{k+1}), \quad \beta_k = \dim(H_k)$</div>
+                    <p class="interest-desc">
+                        Persistent homology, multi-scale Vietoris-Rips and Čech simplicial complexes, and Topological Data Analysis (TDA). Characterizing coordinate-free topological invariants, barcode persistence diagrams, and topological regularization across deep neural representations.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Data Science &amp; Statistics -->
         <section id="applied-systems">
             <div class="section-header">
                 <h2 class="section-title">
                     <span class="section-num">03.</span>
-                    <span>Data Engineering & Descriptive Statistics</span>
+                    <span>Data Science &amp; Statistics</span>
                 </h2>
                 <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">Pipelines & Diagnostics</span>
             </div>
 
             <div class="applied-grid">
-                
+
                 <div class="applied-card">
                     <div>
                         <span class="rp-badge badge-stats">Time Series & ETL</span>
                         <h3 class="rp-title" style="font-size: 1.15rem; margin-top: 0.5rem;">
-                            <a href="https://github.com/Juanmales115/EnergyForecasting" target="_blank">Energy Price Forecasting Pipeline</a>
+                            <a href="https://github.com/Juanmales115/EnergyForecasting" target="_blank" rel="noopener noreferrer">Energy Price Forecasting Pipeline</a>
                         </h3>
                         <p class="rp-body" style="font-size: 0.88rem; margin: 0.75rem 0;">
                             Constructed an automated end-to-end data pipeline streaming electricity grid market APIs into a normalized SQLite database. Modeled non-stationary price dynamics using lag-engineered features and CatBoost ensemble forecasting.
@@ -953,7 +1002,7 @@
                     <div>
                         <span class="rp-badge badge-stats">Descriptive Statistics</span>
                         <h3 class="rp-title" style="font-size: 1.15rem; margin-top: 0.5rem;">
-                            <a href="https://github.com/Juanmales115/Madrid_AirQuality" target="_blank">Environmental Correlation Analysis</a>
+                            <a href="https://github.com/Juanmales115/Madrid_AirQuality" target="_blank" rel="noopener noreferrer">Environmental Correlation Analysis</a>
                         </h3>
                         <p class="rp-body" style="font-size: 0.88rem; margin: 0.75rem 0;">
                             Exploratory descriptive multivariate investigation of urban atmospheric contaminant records. Examined Pearson and Spearman correlation matrices, dispersion measures, temporal trends, and bivariate distribution patterns.
@@ -971,7 +1020,7 @@
                     <div>
                         <span class="rp-badge badge-stats">Exploratory Analysis</span>
                         <h3 class="rp-title" style="font-size: 1.15rem; margin-top: 0.5rem;">
-                            <a href="https://github.com/Juanmales115/Airline_Delay" target="_blank">Commercial Flight Delay Diagnostics</a>
+                            <a href="https://github.com/Juanmales115/Airline_Delay" target="_blank" rel="noopener noreferrer">Commercial Flight Delay Diagnostics</a>
                         </h3>
                         <p class="rp-body" style="font-size: 0.88rem; margin: 0.75rem 0;">
                             Large-scale diagnostic exploration evaluating root causes of logistical flight delays across carriers using variance decomposition, feature attribution, and quantitative visualization.
@@ -984,10 +1033,46 @@
                     </div>
                 </div>
 
+                <article class="applied-card" id="one-safe-step" aria-labelledby="one-safe-step-title">
+                    <div>
+                        <span class="rp-badge badge-stats">NASA Space Apps 2026 ? Granada</span>
+                        <h3 class="rp-title" id="one-safe-step-title" style="font-size: 1.15rem; margin-top: 0.5rem;">
+                            <a href="https://github.com/AndresFerCervell/One-Safe-Step-For-Mankind" target="_blank" rel="noopener noreferrer">One Safe Step for Mankind</a>
+                        </h3>
+                        <p class="project-context">Team project - Lunar landing-site assessment</p>
+                        <p class="rp-body">
+                        Co-developed with teammates for the NASA Space Apps Challenge 2026 in Granada. Given lunar coordinates and a date, the project combines NASA LOLA terrain data with JPL Horizons ephemerides to assess terrain slope, solar illumination and Earth visibility. An interactive 3D explorer makes these geometric conditions easier to investigate.
+                    </p>
+                        <div class="rp-links">
+                            <a href="https://ossm-lunar-navigator-web.onrender.com/" target="_blank" rel="noopener noreferrer" class="rp-link">Demo <span aria-hidden="true"></span></a>
+                            <a href="https://github.com/AndresFerCervell/One-Safe-Step-For-Mankind" target="_blank" rel="noopener noreferrer" class="rp-link">GitHub <span aria-hidden="true"></span></a>
+                        </div>
+                        <details class="project-detail">
+                        <summary>Technical approach &amp; scope</summary>
+                        <ul>
+                            <li><strong>Terrain processing:</strong> NumPy, Rasterio and PyProj process LOLA elevation grids; local slopes use the Horn 3×3 method and a P95 statistic. Remote raster windows and HTTP Range requests limit high-resolution data reads.</li>
+                            <li><strong>Astronomy:</strong> JPL Horizons provides site-specific Sun and Earth vectors. The evaluation compares local angles against the terrain horizon and integrates sampled illumination states across the mission.</li>
+                            <li><strong>Evaluation:</strong> configurable criteria cover slope, initial solar conditions, Earth visibility and accumulated light. Reports distinguish failed criteria from insufficient data.</li>
+                            <li><strong>Application:</strong> a Python/FastAPI backend supports a React and TypeScript explorer built with Three.js and React Three Fiber, including lunar-site selection and Sun–Earth–Moon visualization.</li>
+                        </ul>
+                        <p class="rp-body">The assessment estimates geometric suitability under the model’s assumptions. Terrain coverage and effective resolution limit the result; Earth visibility alone does not establish a radio link. The 3D animation is illustrative, and the project does not simulate vehicle descent or thermal and energy balances.</p>
+                    </details>
+                    </div>
+                    <div style="margin-top: 1rem;"><div class="rp-tags">
+                            <span class="tag">Python / FastAPI</span>
+                            <span class="tag">LOLA / JPL Horizons</span>
+                            <span class="tag">Rasterio / NumPy</span>
+                            <span class="tag">React / TypeScript</span>
+                            <span class="tag">Three.js / React Three Fiber</span>
+                            <span class="tag">Team Hackathon Project</span>
+                        </div></div>
+                </article>
+
+
             </div>
         </section>
 
-        <!-- Section 4: Academic Background & Credentials -->
+        <!-- Section 4: Academic background -->
         <section id="education">
             <div class="section-header">
                 <h2 class="section-title">
@@ -998,7 +1083,7 @@
             </div>
 
             <div class="timeline">
-                
+
                 <!-- Master UGR (Computer Vision Specialization) -->
                 <div class="timeline-item">
                     <div>
@@ -1019,7 +1104,7 @@
                         <p class="timeline-desc">
                             Comprehensive mathematical curriculum: Abstract Algebra, General and Algebraic Topology, Differential Geometry, Real & Complex Analysis, Measure Theory, Probability & Mathematical Statistics, and Numerical Optimization.
                             <br><br>
-                            <b>Bachelor's Thesis (TFG):</b> <i>"La categoría de haces de rango localmente constantes y la teoría de Tannaka"</i> (Advisor: Prof. Laiachi El Kaoutit Zerri, Department of Algebra). <span style="color: #fbbf24; font-weight: 600;">Grade: 9.9 / 10 • Matrícula de Honor (Highest Honors with Distinction)</span>. Establishes the categorical equivalence between locally constant sheaves and fundamental group representations via Tannakian reconstruction and Picard-Vessiot differential Galois theory. <a href="https://drive.google.com/file/d/1sHsGIVNfjZR7440nuxLk3FUjyuki3ZG5/view?usp=sharing" target="_blank" style="color: var(--accent-math); text-decoration: underline;">[Read Thesis PDF]</a>
+                            <b>Bachelor's Thesis (TFG):</b> <i>"La categoría de haces de rango localmente constantes y la teoría de Tannaka"</i> (Advisor: Prof. Laiachi El Kaoutit Zerri, Department of Algebra). <span style="color: #fbbf24; font-weight: 600;">Grade: 9.9 / 10 • Matrícula de Honor (Highest Honors with Distinction)</span>. Establishes the categorical equivalence between locally constant sheaves and fundamental group representations via Tannakian reconstruction and Picard-Vessiot differential Galois theory. <a href="https://drive.google.com/file/d/1sHsGIVNfjZR7440nuxLk3FUjyuki3ZG5/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color: var(--accent-math); text-decoration: underline;">[Read Thesis PDF]</a>
                         </p>
                     </div>
                     <div class="timeline-date">Sep. 2022 – 2026</div>
@@ -1084,7 +1169,7 @@
             </div>
 
             <div class="skills-category-grid">
-                
+
                 <div class="skill-group">
                     <div class="skill-group-title">
                         <span>// Theoretical Foundations</span>
@@ -1172,11 +1257,16 @@
             </div>
         </section>
 
+        </main>
+        <section class="contact-panel" id="contact" aria-labelledby="contact-title">
+            <div><p class="eyebrow">Get in touch</p><h2 id="contact-title">Let’s talk mathematics & machine learning.</h2><p>For questions about my projects, research interests or potential collaborations.</p></div>
+            <a class="btn-action btn-primary" href="mailto:juanmales115@gmail.com">Send me an email <span aria-hidden="true">↗</span></a>
+        </section>
         <!-- Footer -->
         <footer>
             <p>
-                <a href="https://github.com/Juanmales115" target="_blank">GitHub</a> • 
-                <a href="https://linkedin.com/in/juanma-ramirez-rivas/" target="_blank">LinkedIn</a> • 
+                <a href="https://github.com/Juanmales115" target="_blank" rel="noopener noreferrer">GitHub</a> •
+                <a href="https://linkedin.com/in/juanma-ramirez-rivas/" target="_blank" rel="noopener noreferrer">LinkedIn</a> •
                 <a href="mailto:juanmales115@gmail.com">juanmales115@gmail.com</a>
             </p>
             <p style="margin-top: 0.5rem; font-size: 0.8rem;">
